@@ -23,25 +23,20 @@ def int_check(question, error, low, high, exitcode):
             print(error)
             continue
 
-def str_checker(question, available_choices):
+def str_checker(question, available_choices, error):
     """returns the string if it meets anything in available_choices"""
     while True:
         choice = input(question)
         if choice.lower() in available_choices:
             return choice.lower()[0]
         else:
-            print("That is not a valid choice.")
+            print(error)
             continue
 
 def yes_no(question, error):
-    """returns true if user types yes, returns false if no, loops if neither"""
-    while True:
-        yes = ["yes", "y"]
-        no = ["no", "n"]
-        response = input(question).lower()
-        if response in yes:
-            return True
-        elif response in no:
-            return "no"
-        else:
-            print(error)
+    """returns yes or no if user types y/n, loops if neither"""
+    answer = str_checker(question, ["y","yes","n","no"], error)
+    if answer in ["y", "yes"]:
+        return "yes"
+    else:
+        return "no"
