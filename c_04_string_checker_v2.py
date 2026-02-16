@@ -13,9 +13,3 @@ def str_checker(question, available_choices, num_letters, error):
             
         print(error)
         continue
-
-answers = ["broken", "beyond repair", "banana"]
-
-while True:
-    ans = str_checker("say broken, \"beyond repair\" or banana: ", answers, 3, "WRONG")
-    print(ans)
