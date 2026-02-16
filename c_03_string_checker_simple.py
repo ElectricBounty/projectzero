@@ -6,4 +6,3 @@ def str_checker(question, available_choices, error):
             return choice.lower()
         else:
             print(error)
-            continue

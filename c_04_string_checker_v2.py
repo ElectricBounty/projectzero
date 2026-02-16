@@ -12,4 +12,3 @@ def str_checker(question, available_choices, num_letters, error):
                 return item
             
         print(error)
-        continue

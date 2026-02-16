@@ -25,6 +25,6 @@ while True:
     if 12 <= age <= 120:
         print(f"{name} bought a ticket ({age}y)")
     elif age < 12:
-        print("you are the youngest person ever")
+        print(f"you are too young! ({age}y)")
     else:
-        print("you are an unc")
+        print(f"you are too old! ({age}y)")
