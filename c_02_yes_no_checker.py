@@ -6,7 +6,6 @@ def yes_no(question, error):
             return answer
         else:
             print(error)
-            continue
 
 while True:
     yn = yes_no("yes/no ", "gotta say y / n")
